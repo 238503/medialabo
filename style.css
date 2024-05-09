@@ -1,5 +1,13 @@
 h1 {
-	color: blue;
-	background-color: rgb(46, 199, 166);
-	text-shadow: white 1px 0 10px;
+	color: black;
+	text-shadow: rgb(82, 178, 226) 1px 0 10px;
 } 
+
+h2 {
+    color: black;
+	text-shadow: rgb(237, 230, 105) 1px 0 10px;
+}
+h3 {
+    color: black;
+	text-shadow: rgb(231, 77, 133) 1px 0 10px;
+}
