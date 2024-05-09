@@ -22,7 +22,8 @@ h2 {
 	margin: 5px;
 	font-family: cursive;
 	color: #3f3faf;
-	background: linear-gradient(to right, white, white 25%, #ffefaf 50%, #ffefaf );
+	background: linear-gradient(to right, white, white 20%, #ffefaf 80%, #ffefaf );
+	border: none;
 }
 
 div#zentai {
@@ -38,8 +39,8 @@ div#zentai {
 img  {
     float: right;   /* 画像を右に浮かせる */
 
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin: 10px 0 10px 10px;
 }
 
