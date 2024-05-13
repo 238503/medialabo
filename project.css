@@ -7,10 +7,11 @@ table {
 }
 
 th scope , td {
-    border: solid 1px black;
+    border: solid 1px rgb(30, 255, 0);
     padding: 20px 20px 20px;
 }
 
 td {
     font-size: 1.1em;
+    background: rgba(38, 255, 0, 0.124);
 }

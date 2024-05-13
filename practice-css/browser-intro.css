@@ -22,7 +22,7 @@ h2 {
 	margin: 5px;
 	font-family: cursive;
 	color: #3f3faf;
-	background: linear-gradient(to right, white, white 20%, #ffefaf 80%, #ffefaf );
+	background: (to right, white, white 20%, #ffefaf 80%, #ffefaf );linear-gradient
 	border: none;
 }
 
