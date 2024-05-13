@@ -1,13 +1,41 @@
+body {
+    background-color: rgba(1, 1, 1, 0.782);
+}
+
 h1 {
-	color: black;
+	color: white;
 	text-shadow: rgb(82, 178, 226) 1px 0 10px;
 } 
 
 h2 {
-    color: black;
+    color: white;
 	text-shadow: rgb(237, 230, 105) 1px 0 10px;
 }
 h3 {
-    color: black;
+    color: white;
 	text-shadow: rgb(231, 77, 133) 1px 0 10px;
 }
+
+p {
+    color: white;
+}
+
+div#zentai {
+	display: grid;
+	grid-template-columns: 1fr ;
+	grid-auto-rows: 160px;
+	grid-gap: 50px;
+	padding: 5px;
+	width: 1024px;;
+	
+}
+
+a:link , a:visited {
+    color: rgb(78, 232, 158);
+    text-decoration: underline;
+}
+
+a:active {
+    color: #FF0000;
+    text-decoration: underline;
+   }
