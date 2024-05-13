@@ -38,4 +38,8 @@ a:link , a:visited {
 a:active {
     color: #FF0000;
     text-decoration: underline;
-   }
+}
+
+a:hover {
+    text-decoration: none;
+}
