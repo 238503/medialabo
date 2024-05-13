@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(1, 1, 1, 0.782);
+    background: linear-gradient(#e66465, #9198e5);
 }
 
 table {
@@ -9,10 +9,9 @@ table {
 th scope , td {
     border: solid 1px white;
     padding: 20px 20px 20px;
-    background: inear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 }
 
 td {
-    font-size: 1.1em;
-    background: inear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    font-size: 1.1em; 
+    text-shadow: 1px 1px 2px pink;
 }
