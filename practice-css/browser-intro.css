@@ -18,12 +18,9 @@ h1 {
 }
 
 h2 {
-	border: solid 1px black;
-	margin: 5px;
 	font-family: cursive;
 	color: #3f3faf;
-	background: (to right, white, white 20%, #ffefaf 80%, #ffefaf );linear-gradient
-    border: none;
+	background: linear-gradient(to right, white, white 20%, #ffefaf 80%, #ffefaf );
 }
 
 div#zentai {
