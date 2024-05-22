@@ -200,4 +200,17 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを書こう
+console.log(data);
 
+    // dataオブジェクトからデータを抽出してコンソールに表示
+    data.results.shop.forEach(function(shop) {
+        console.log("店名:", shop.name);
+        console.log("アクセス:", shop.access);
+        console.log("住所:", shop.address);
+        console.log("予算:", shop.budget.name);
+        console.log("キャッチ:", shop.catch);
+        console.log("ジャンル:", shop.genre.name);
+        console.log("営業日:", shop.open);
+        console.log("最寄駅:", shop.station_name);
+        console.log("---------------------------------------");
+    });
