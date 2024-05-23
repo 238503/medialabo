@@ -23,9 +23,43 @@ p.style.textEmphasis = 'sesame green';
 
 // 練習4-3 写真表作成プログラム
 
+let phototable1 = "taro.png";
+let img1 = document.createElement('img');
+img1.setAttribute('src', phototable1);
+img1.setAttribute('alt', '顔写真');
+img1.setAttribute('width', '200');
+let d1 = document.querySelector('div#phototable');
+d1.insertAdjacentElement('beforeend', img1);
+
+let phototable2 = "jiro.png";
+let img2 = document.createElement('img');
+img2.setAttribute('src', phototable2);
+img2.setAttribute('alt', '顔写真');
+img2.setAttribute('width', '200');
+let d2 = document.querySelector('div#phototable');
+d2.insertAdjacentElement('beforeend', img2);
+
+let phototable3 = "hanako.png";
+let img3 = document.createElement('img');
+img3.setAttribute('src', phototable3);
+img3.setAttribute('alt', '顔写真');
+img3.setAttribute('width', '200');
+let d3 = document.querySelector('div#phototable');
+d3.insertAdjacentElement('beforeend', img3);
 
 // 練習4-4 箇条書き削除プログラム
+
+let item = document.querySelectorAll("ul#location > li");
+for(let items of item){
+	items.remove();
+  }
 
 
 // 練習4-5 箇条書き追加プログラム
 
+let ul1 = document.querySelector('ul#location');
+for(let list of data){
+	let li = document.createElement('li');
+	li.textContent = (list.name + ' ... 緯度' + list.lat + ', 軽度:' + list.lng);
+	ul1.insertAdjacentElement('beforeend',li);
+}
