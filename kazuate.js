@@ -16,8 +16,8 @@ function hantei() {
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
   
   let y = document.querySelector('input[name="yosoti"]');
-  let yoso = (y.value);
-  console.log(yoso);
+  let yoso = Math.floor(y.value);
+  console.log(kaisu + "回目:" +yoso);
   
   // 課題3-1: 正解判定する
   
@@ -32,7 +32,7 @@ function hantei() {
     r.textContent = "答えは " + kotae + " でした。すでにゲームは終わっています。";
   } else if (yoso === kotae) {
     r.textContent = "正解です。おめでとう!";
-  } else {
+  } else  {
     if (kaisu === 3) {
       r.textContent = "まちがい。残念でした答えは " + kotae + " です。";
     } else if (kaisu <= 2) {
