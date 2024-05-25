@@ -8,9 +8,10 @@
 
   <body>
     <h1>数当てゲーム</h1>
-    <P>これから3回に分けて数当てゲームのページを作成します。1から10の乱数を生成し、ユーザが最大3回で当てるゲームです。ユーザの予想に対し、答えが大きいか小さいかを表示し、正解すれば勝ちです。テキストボックスとボタンで入力を受け付け、結果を表示します。</P>
-    <p>将来ここにはテキストボックスとボタンを設置します</p>
-    <p><span id="kaisu">1</span>回目の予想: <span id="answer">4</span></p>
-    <p id="result">将来ここに判定結果を表示します</p>
+    <label for="yosoti">1から10の間の整数:</label>
+    <input type="suji" name="yosoti" id="yosoti" size="3">
+    <button id="print">回答</button>
+    <p><span id="kaisu">0</span>回目の予想: <span id="answer"></span></p>
+    <p id="result"></p>
   </body>
 </html>
