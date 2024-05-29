@@ -2,8 +2,12 @@ body {
     background: linear-gradient(#e66465, #9198e5);
 }
 
-table {
+h1,thead,tbody {
     color: white;
+}
+
+h1 {
+    text-align: center;
 }
 
 th scope , td {
