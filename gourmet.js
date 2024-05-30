@@ -204,9 +204,9 @@ console.log(data);
 
 // dataオブジェクトからデータを抽出してコンソールに表示
 for (let key in data.results.shop) {
-    let shop = data.results.shop[key];
+    let shop = data.results.shop[access];
     for (let item in shop) {
-        console.log(item + ":", shop[item]);
+        console.log("住所:", item);
     }
     console.log("---------------------------------------");
 }
