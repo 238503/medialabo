@@ -225,3 +225,11 @@ for (let key of data.results.shop) {
     
   console.log("---------------------------------------");
 }
+
+let b = document.querySelector('#print');
+b.addEventListener('click', output);
+
+function output() {
+    let i = document.querySelector('#search').value;     
+    console.log(i);
+}
