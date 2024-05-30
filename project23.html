@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>グルメ情報検索</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>グルメ情報検索</h1>
+    <div class="search">
+        <label for="genre">ジャンル選択:</label>
+        <select id="genre">
+            <option value="G001">居酒屋</option>
+            <option value="G002">ダイニングバー・バル</option>
+            <option value="G003">創作料理</option>
+            <option value="G004">和食</option>
+            <option value="G005">洋食</option>
+            <option value="G006">イタリアン・フレンチ</option>
+            <option value="G007">中華</option>
+            <option value="G008">焼肉・ホルモン</option>
+            <option value="G009">アジア・エスニック料理</option>
+            <option value="G010">各国料理</option>
+            <option value="G011">カラオケ・パーティ</option>
+            <option value="G012">バー・カクテル</option>
+            <option value="G013">ラーメン</option>
+            <option value="G014">カフェ・スイーツ</option>
+            <option value="G015">その他グルメ</option>
+            <option value="G016">お好み焼き・もんじゃ</option>
+            <option value="G017">韓国料理</option>
+        </select>
+        <button onclick="search()">検索</button>
+    </div>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>店舗名</th>
+                <th>アクセス情報</th>
+                <th>住所</th>
+                <th>予算</th>
+                <th>キャッチコピー</th>
+                <th>ジャンル</th>
+                <th>営業日時</th>
+                <th>最寄駅</th>
+                <th>サブジャンル</th>
+            </tr>
+        </thead>
+        <tbody id="dataBody"></tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
