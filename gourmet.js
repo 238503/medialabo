@@ -203,10 +203,25 @@ let data = {
 console.log(data);
 
 // dataオブジェクトからデータを抽出してコンソールに表示
-for (let key in data.results.shop) {
-    let shop = data.results.shop[access];
-    for (let item in shop) {
-        console.log("住所:", item);
-    }
-    console.log("---------------------------------------");
+for (let key of data.results.shop) {
+  let shop1 = key.name;
+  let shop2 = key.access;
+  let shop3 = key.address;
+  let shop4 = key.budget.name;
+  let shop5 = key.catch;
+  let shop6 = key.genre.name;
+  let shop7 = key.open;
+  let shop8 = key.mobile_access;
+  let shop9 = key.sub_genre.name;
+  console.log("名前：" + shop1);
+  console.log("アクセス：" + shop2);
+  console.log("住所：" + shop3);
+  console.log("予算：" + shop4);
+  console.log("キャッチコピー：" + shop5);
+  console.log("ジャンル：" + shop6);
+  console.log("営業時間：" + shop7);
+  console.log("最寄駅：" + shop8);
+  console.log("サブジャンル：" + shop9);
+    
+  console.log("---------------------------------------");
 }
