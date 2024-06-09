@@ -3,6 +3,8 @@
         <meta charset="utf-8">
         <title>検索結果のデータ項目</title>
         <link rel="stylesheet" href="project.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+        <script src="gourmet.js" defer></script>
     </head>
     <body>
         <h1>🍽 グルメ情報 🍽</h1>
@@ -28,7 +30,26 @@
         </select>
         <button id="print">検索</button>
 
-        <script src="gourmet.js"></script>
-        <div id="result"></div>
+        <h2 id="length"></h2>
+        <div id="result">
+            <table id="shopTable">
+                <thead>
+                    <tr>
+                        <th>名前</th>
+                        <th>アクセス</th>
+                        <th>住所</th>
+                        <th>予算</th>
+                        <th>キャッチコピー</th>
+                        <th>ジャンル</th>
+                        <th>営業時間</th>
+                        <th>最寄駅</th>
+                        <th>サブジャンル</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- ここにデータが挿入されます -->
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>

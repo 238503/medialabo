@@ -200,36 +200,89 @@ let data = {
 };
 
 // 課題3-2 ここからプログラムを書こう
-console.log(data);
+
 
 // dataオブジェクトからデータを抽出してコンソールに表示
-for (let key of data.results.shop) {
-  let shop1 = key.name;
-  let shop2 = key.access;
-  let shop3 = key.address;
-  let shop4 = key.budget.name;
-  let shop5 = key.catch;
-  let shop6 = key.genre.name;
-  let shop7 = key.open;
-  let shop8 = key.mobile_access;
-  let shop9 = key.sub_genre.name;
-  console.log("名前：" + shop1);
-  console.log("アクセス：" + shop2);
-  console.log("住所：" + shop3);
-  console.log("予算：" + shop4);
-  console.log("キャッチコピー：" + shop5);
-  console.log("ジャンル：" + shop6);
-  console.log("営業時間：" + shop7);
-  console.log("最寄駅：" + shop8);
-  console.log("サブジャンル：" + shop9);
-    
-  console.log("---------------------------------------");
-}
 
 let b = document.querySelector('#print');
 b.addEventListener('click', output);
 
 function output() {
-    let i = document.querySelector('#search').value;     
-    console.log(i);
+  let i = document.querySelector('#search').value;     
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/' + i + '.json';
+  
+  axios.get(url)
+        .then(showResult)   // 通信成功
+        .catch(showError)   // 通信失敗
+        .then(finish);      // 通信の最後の処理
+}
+
+function showResult(resp){
+  let shops_length = resp.data.results.shop.length;
+        if (shops_length > 0) {
+            console.log("八王子周辺で" + shops_length + "件ヒットしました。");
+            document.querySelector('#length').textContent = "八王子周辺で" + shops_length + "件ヒットしました。";
+
+            let tableBody = document.querySelector('#tableBody');
+            if (!tableBody) {
+                console.error('tableBody is null');
+                return;
+            }
+
+            // 前回の結果をクリア
+            tableBody.innerHTML = '';
+
+            let shops = resp.data.results.shop;
+
+            for (let i = 0; i < shops.length; i++) {
+                let name_data = shops[i].name;
+                let access_data = shops[i].access;
+                let address_data = shops[i].address;
+                let budget_data = shops[i].budget.name;
+                let catch_data = shops[i].catch;
+                let genre_data = shops[i].genre.name;
+                let open_data = shops[i].open;
+                let station_data = shops[i].station_name;
+                let sub_genre_data = shops[i].sub_genre ? shops[i].sub_genre.name : 'データなし';
+
+                console.log(name_data);
+                console.log(access_data);
+                console.log(address_data);
+                console.log(budget_data);
+                console.log(catch_data);
+                console.log(genre_data);
+                console.log(open_data);
+                console.log(station_data);
+                console.log(sub_genre_data);
+                console.log("--------------------");
+
+                // テーブル行を作成して追加
+                let row = tableBody.insertRow();
+                row.insertCell().textContent = name_data;
+                row.insertCell().textContent = access_data;
+                row.insertCell().textContent = address_data;
+                row.insertCell().textContent = budget_data;
+                row.insertCell().textContent = catch_data;
+                row.insertCell().textContent = genre_data;
+                row.insertCell().textContent = open_data;
+                row.insertCell().textContent = station_data;
+                row.insertCell().textContent = sub_genre_data;
+            }
+        } else {
+            console.log("一致するお店がありませんでした。");
+            document.querySelector('#length').textContent = "一致するお店がありませんでした。";
+            let tableBody = document.querySelector('#tableBody');
+            if (tableBody) {
+                tableBody.innerHTML = '';  // 前回の結果をクリア
+            }
+        }
+  }
+
+
+function showError(err) {
+  console.log(err);
+}
+
+function finish() {
+  console.log();
 }
