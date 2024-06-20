@@ -17,7 +17,7 @@ function hantei() {
   
   let y = document.querySelector('input[name="yosoti"]');
   let yoso = Math.floor(y.value);
-  console.log(kaisu + "回目:" +yoso);
+  console.log(kaisu+1 + "回目:" +yoso);
   
   // 課題3-1: 正解判定する
   
